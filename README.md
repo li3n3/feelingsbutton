@@ -1,5 +1,5 @@
 # feelingsbutton
-Inspired by the excellent @funkatron and his hambutton.com. Also inspired by NYC
+Inspired by the excellent [@funkatron](https://github.com/funkatron) and his hambutton.com. Also inspired by NYC
 traffic feelings, as expressed by immobile cars and their drivers and their sad,
 futile honking choirs.
 
