@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Feelings Button</title>
+        <meta name="description" content="A button for feelings">
+        <meta name="author" content="Liene Verzemnieks">
+        <script src="fastclick.js"></script>
+        <script>
+            window.addEventListener("load", function() {
+
+                var feelingsbutton_el = document.getElementById('feelingsbutton');
+
+                // attach FastClick to feelingsbutton
+                FastClick.attach(feelingsbutton_el);
+
+                feelingsbutton_el.addEventListener("click", function() { 
+                    playSound();
+                }, false);
+
+                feelingsbutton_el.addEventListener("touchstart", function() { 
+                    playSound();
+                }, false);
+
+
+                // onload event to hide nav bar
+                // setTimeout(function(){
+                //     window.scrollTo(0,1);
+                // }, 0);
+
+            }, false);
+
+
+            function playSound() {
+                snd.play();
+                // clicky.log('#feelingsbutton-click', 'feelingsbutton-click', 'click');
+            }
+
+            function onDurationChange(e) {
+            }
+
+            function onPlay(e) {
+            }
+        </script>
+
+
+    </head>
+    <body>
+        <button id="feelingsbutton"><img src="steeringwheel.png" alt="a steering wheel with 'feelings' written on it" /></button>
+        <script>
+            var snd = new Audio();
+            snd.addEventListener("play",onPlay);
+            snd.addEventListener("durationchange",onDurationChange);
+            if (!!snd.canPlayType && snd.canPlayType( 'audio/mpeg;' )) {
+                snd.setAttribute("src","smallfeelingschoir.mp3");
+                snd.setAttribute("type","audio/mpeg; codecs='mp3'");
+                } else {
+                snd.setAttribute("src","smallfeelingschoir.wav");
+            }
+            snd.setAttribute("preload","auto");
+            snd.load();
+        </script>
+
+    </body>
+</html>
